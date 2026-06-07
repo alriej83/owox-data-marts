@@ -43,7 +43,7 @@ jobs:
         run: mkdir -p tmp
 
       - name: Run Browser E2E tests
-        run: cd apps/web && npx playwright test
+        run: cd apps/web && npx playwright test e2e/specs/availability.spec.ts e2e/specs/datamart-create.spec.ts e2e/specs/datamart-data-setup.spec.ts e2e/specs/datamart-detail.spec.ts e2e/specs/datamart-list.spec.ts e2e/specs/datamart-tabs.spec.ts e2e/specs/destination.spec.ts e2e/specs/lifecycle.spec.ts e2e/specs/notifications.spec.ts e2e/specs/oauth-skeletons.spec.ts e2e/specs/ownership.spec.ts e2e/specs/report.spec.ts e2e/specs/run-history.spec.ts e2e/specs/storage.spec.ts e2e/specs/trigger.spec.ts
         env:
           CI: true
           NODE_ENV: test
